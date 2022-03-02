@@ -4,7 +4,8 @@
   "description": "Facebook/ LinkedIn kind of app for content posting",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -L index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/clashofclan0477/ContentPostingAppBackend/issues"
   },
-  "homepage": "https://github.com/clashofclan0477/ContentPostingAppBackend#readme"
+  "homepage": "https://github.com/clashofclan0477/ContentPostingAppBackend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "jwt-token": "^1.0.9",
+    "mongoose": "^6.2.4",
+    "nodemon": "^2.0.15"
+  }
 }
