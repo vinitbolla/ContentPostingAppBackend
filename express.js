@@ -56,5 +56,27 @@ app.get('/', (req, res) => {
   });
 });
 
+// - the POST handler for processing the uploaded file
+
+app.post('/', upload.single('image'), (req, res, next) => {
+
+  var obj = {
+    title: req.body.title,
+    img: {
+      data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+      contentType: 'image/png'
+    }
+  }
+  post.create(obj, (err, item) => {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      // item.save();
+      res.redirect('/');
+    }
+  });
+});
+
 
 module.exports = app;
