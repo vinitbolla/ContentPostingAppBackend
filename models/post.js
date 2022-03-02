@@ -10,6 +10,6 @@ var postSchema = new mongoose.Schema({
   }
 });
 
-//Image is a model which has a schema imageSchema
+//Post is a model which has a schema imageSchema
 
-module.exports = new mongoose.model('Image', postSchema);
+module.exports = new mongoose.model('Post', postSchema);
