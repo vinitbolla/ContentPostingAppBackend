@@ -1,0 +1,19 @@
+{
+  "name": "contentpostingappbackend",
+  "version": "1.0.0",
+  "description": "Facebook/ LinkedIn kind of app for content posting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clashofclan0477/ContentPostingAppBackend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clashofclan0477/ContentPostingAppBackend/issues"
+  },
+  "homepage": "https://github.com/clashofclan0477/ContentPostingAppBackend#readme"
+}
