@@ -7,7 +7,11 @@ var postSchema = new mongoose.Schema({
   {
     data: Buffer,
     contentType: String
-  }
+  },
+  created: {
+    type: Date,
+    default: Date.now
+  },
 });
 
 //Post is a model which has a schema imageSchema

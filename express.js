@@ -6,7 +6,8 @@ const compress = require("compression");
 const cors = require("cors");
 const helmet = require("helmet");
 const multer = require('multer');
-const post = require('./models');
+const fs = require('fs');
+const post = require('./models/post');
 
 const app = express();
 
@@ -46,11 +47,16 @@ var upload = multer({ storage: storage });
 
 app.get('/', (req, res) => {
   post.find({}, (err, items) => {
+    // console.log(items);
     if (err) {
       console.log(err);
       res.status(500).send('An error occurred', err);
     }
     else {
+      // items.map(async (item) => {
+      //   res.render('imagesPage', { item })
+      // });
+      // res.render(items);
       res.render('imagesPage', { items: items });
     }
   });
@@ -61,7 +67,7 @@ app.get('/', (req, res) => {
 app.post('/', upload.single('image'), (req, res, next) => {
 
   var obj = {
-    title: req.body.title,
+    title: req.body.name,
     img: {
       data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
       contentType: 'image/png'
@@ -72,7 +78,7 @@ app.post('/', upload.single('image'), (req, res, next) => {
       console.log(err);
     }
     else {
-      // item.save();
+      item.save();
       res.redirect('/');
     }
   });
