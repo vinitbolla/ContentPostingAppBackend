@@ -3,5 +3,5 @@ Facebook/ LinkedIn kind of app for content posting
 
 Application Deployed on Heroku Cloud
 
-Click here to check out the application. Click on the link below
+Click on the link below to check out the application.
 https://content-posting-app.herokuapp.com/
