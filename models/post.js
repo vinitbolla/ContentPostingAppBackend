@@ -8,6 +8,11 @@ var postSchema = new mongoose.Schema({
     data: Buffer,
     contentType: String
   },
+  visited: {
+    type: Number,
+    default: 0,
+    enum: [0, 1],
+  },
   created: {
     type: Date,
     default: Date.now
